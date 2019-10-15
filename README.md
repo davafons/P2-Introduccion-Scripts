@@ -1,6 +1,6 @@
 # Práctica 2 - Introducción a los Scripts en Unity
 
-## Requisitos: Crear un script para el personaje que lo desplace por la pantalla, sin aplicar simulación física.
+## Crear un script para el personaje que lo desplace por la pantalla, sin aplicar simulación física.
 * Agregar un campo público que permita graduar la velocidad del movimiento desde el inspector de objetos.
 * Estar a la escucha de si el usuario ha utilizado los ejes virtuales. Elegir cuáles se va a permitir utilizar: flechas, wasd.
 * El recorrido virtual realizado con los controladores (teclas) debe ser proporcional a lo que se desplaza el jugador:
