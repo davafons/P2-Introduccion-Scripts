@@ -1,6 +1,6 @@
-# P2-Introduccion Scripts
+# Práctica 2 - Introducción a los Scripts en Unity
 
-Ejercicio 1: Crear un script para el personaje que lo desplace por la pantalla, sin aplicar simulación física.
+## Requisitos: Crear un script para el personaje que lo desplace por la pantalla, sin aplicar simulación física.
 * Agregar un campo público que permita graduar la velocidad del movimiento desde el inspector de objetos.
 * Estar a la escucha de si el usuario ha utilizado los ejes virtuales. Elegir cuáles se va a permitir utilizar: flechas, wasd.
 * El recorrido virtual realizado con los controladores (teclas) debe ser proporcional a lo que se desplaza el jugador:
@@ -15,3 +15,13 @@ Ejercicio 1: Crear un script para el personaje que lo desplace por la pantalla, 
 
 
 ![demo.gif](demo.gif)
+
+## Explicación
+
+Para utilizar el script que hemos desarrollado, `PlayerSquareMovement.cs`, se tiene que añadir como componente al Gameobject que queramos controlar.
+
+Primero, en la función `Update()` se recoge el __input__ del usuario con los métodos `Input.GetAxis` para cada eje de movimiento (desplazamiento en horizontal, desplazamiento en vertical, y giro).
+
+Después, se utilizan los métodos `transform.Translate` y `transform.Rotate` para aplicar el movimiento, dependiendo también de algunas variables como la __velocidad__ de desplazamiento o de giro.
+
+Aparte, con los métodos `OnTriggerEnter()` y `OnTriggerExit` podemos detectar si ha __colisionado con un obstáculo__ (En base a la Tag que tenga asignada), y reducir la velocidad de movimiento del jugador.
